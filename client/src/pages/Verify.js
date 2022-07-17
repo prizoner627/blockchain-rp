@@ -124,9 +124,13 @@ export default function Verify() {
       let ext = getExtension(files[0].name);
 
       formData.append("files", files[0], `${filename}.${ext}`);
-      const data1 = await axios.post("http://localhost:5002/verify", formData, {
-        withCredentials: true,
-      });
+      const data1 = await axios.post(
+        "http://164.92.213.2:5002/verify",
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
       console.log(data1?.data?.data);
 
       setSuccess("Matching record successfully. Your E-Book is issued by us.");

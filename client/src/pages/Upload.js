@@ -128,7 +128,7 @@ export default function Upload() {
       formData.append("files", files[0], `${filename}.${ext}`);
       console.log(formData);
       const data1 = await axios.post(
-        "http://localhost:5002/upload-files",
+        "http://164.92.213.2:5002/upload-files",
         formData,
         { withCredentials: true }
       );
@@ -142,7 +142,7 @@ export default function Upload() {
       };
 
       const data2 = await axios.post(
-        "http://localhost:5002/create-book",
+        "http://164.92.213.2:5002/create-book",
         formdata2,
         { withCredentials: true }
       );

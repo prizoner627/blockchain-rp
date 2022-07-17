@@ -89,7 +89,7 @@ export default function Upload() {
     setLoading(true);
 
     try {
-      const data1 = await axios.get("http://localhost:5002/get-blockchain", {
+      const data1 = await axios.get("http://164.92.213.2:5002/get-blockchain", {
         withCredentials: true,
       });
       console.log(data1?.data?.data);
